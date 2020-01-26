@@ -1,8 +1,6 @@
-// Code YouTubeDebugger Component Here
-
 import React from "react";
 
-export default class YouTubeDebugger extends React.Component {
+class YouTubeDebugger extends React.Component {
   constructor() {
     super();
 
@@ -33,12 +31,27 @@ export default class YouTubeDebugger extends React.Component {
         ...this.state.settings,
         video: {
           ...this.state.settings.video,
-          resolution: '720p'
+          resolution: "720p"
         }
       }
     });
 
- render() {
+    /*
+
+    Or this can be defined using the Object.assign method:
+    
+    this.setState({
+      settings: Object.assign({}, this.state.settings, {
+        video: Object.assign({}, this.state.settings.video, {
+          resolution: '720p'
+        })
+      })
+    });
+    
+    */
+  };
+
+  render() {
     return (
       <div>
         <button className="bitrate" onClick={this.handleChangeBitrate}>
@@ -51,3 +64,5 @@ export default class YouTubeDebugger extends React.Component {
     );
   }
 }
+
+export default YouTubeDebugger;
