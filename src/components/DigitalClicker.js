@@ -1,5 +1,5 @@
 // Code DigitalClicker Component Here
-import { React } from "react";
+import React from "react";
 
 class DigitalClicker extends React.component {
   constructor() {
